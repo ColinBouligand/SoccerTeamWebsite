@@ -1,0 +1,5 @@
+RewriteEngine on
+#Permet de filtrer les URL afin de ne pas sélectionner les fichiers dans content présents dans le code html
+RewriteCond %{REQUEST_URI} !^/(website/Vue)
+RewriteCond %{REQUEST_URI} !^/(website/content)
+RewriteRule (.*) /website/Vue/$1
